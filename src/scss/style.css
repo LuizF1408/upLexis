@@ -6373,8 +6373,8 @@ body * {
 }
 
 .slider > #input-slide-autoplay:checked ~ ul > li.slide-1 {
-  -webkit-animation: slide 32000ms infinite 6000ms linear;
-  animation: slide 32000ms infinite 6000ms linear;
+  -webkit-animation: slide 32000ms infinite 4000ms linear;
+  animation: slide 32000ms infinite 4000ms linear;
 }
 
 .slider > #input-slide-autoplay:checked ~ ul > li {
