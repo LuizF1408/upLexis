@@ -14,7 +14,18 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+body *{
+    width: 100%;
+    max-width: 1200px;
+    
+    
+    
+  }
+  
+
 .container{
+    width: 100%;
+    max-width: 1200;
     margin: auto;
     width: 1200px;
    
@@ -22,6 +33,7 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
     .container_item {
         margin: 10px;
         hr {
+            width: 1196px;
         border: 2px solid $colorPrimary;
      }
     
@@ -29,15 +41,72 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
     .container_banner {
 
         width: 100%;
+        position: relative;
+        display: block;
         height: 200px;
-        background-color: black;
+        z-index: 100;
+       
+
+        .slider{
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .slider > ul {
+            height: 200px;
+            z-index: 100;
+        }
+        .slider > ul > li{
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        
+            opacity: 0;
+            z-index: 1;	
+              -webkit-transition: all 2000ms ease;
+              -moz-transition: all 2000ms ease;
+              -ms-transition: all 2000ms ease;
+              -o-transition: all 2000ms ease;
+              transition: all 2000ms ease;
+        }
+        .slider > #input-slide-0:checked ~ ul > li.slide-0,
+        .slider > #input-slide-1:checked ~ ul > li.slide-1,
+        .slider > #input-slide-0:checked ~ ul > li.slide-2,
+        .slider > #input-slide-1:checked ~ ul > li.slide-3{
+            opacity: 1;
+            z-index: 2;
+            
+        }
+        .slider > ul > li.slide-0{
+            background-image: url("../img/banner.png");
+        }
+        .slider > ul > li.slide-1{
+            background-image: url("../img/banner2.png");
+        }
+        .slider > ul > li.slide-2{
+            background-image: url("../img/banner.png");
+        }
+        .slider > ul > li.slide-3{
+            background-image: url("../img/banner2.png");
+        }
+        ul,
+        li{
+          list-style: none;
+        }
+        
+        input{
+          display: none;
+        }
+        
         
     
     }
     .nav {
         display: flex;
         align-items: center;
-        margin: 20px 20px 10px 20px;
+        margin-left: 10px;
+        width: 1200px;
         height: 80px;
         a {
             font-size: 12px;
@@ -46,15 +115,19 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
             text-align: center;
             
 
-            width: 10%;
+            width: 120px;
             height: 80px;
             border: 1px solid $colorSecondary;
+            border-radius: 2px;
 
 
             i{
                 display: flex;
                 flex-direction: column;
-                padding: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                width: 100%;
                 
 
             }
@@ -67,18 +140,20 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
         }
     }
     .container_card {
-
+        width:100% ;
+        max-width: 1200px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin: 20px;
+        margin: 20px 20px 20px 0;
        
 
         .item {
             
-            width: 245px;
-            height: 300px;
+            width: 250px;
             margin: 20px;
+            height: 300px;
+            
             border: 1px solid $colorSecondary;
             border-radius: 5px;
            
@@ -128,7 +203,7 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
                     color : $text1;
                     font-size:17px;
                     font-weight: bold;
-                    padding: 10px 10px 0 0;
+                    padding: 10px 0 0 0;
                     
                 
                 }
@@ -158,6 +233,57 @@ $backGradColor1:rgba(248, 116, 27, 0.857);
     
     }
 }
+
+
+
+  @-webkit-keyframes slide{
+      0%, 100% { opacity: 0; }
+      6%, 25% { opacity: 1; z-index: 2; }
+      30%, 50% { opacity: 2; z-index: 2; }
+  }
+  @-moz-keyframes slide{
+      0%, 100% { opacity: 0; }
+      6%, 24% { opacity: 1; z-index: 2; }
+      30%, 50% { opacity: 2; z-index: 2; }
+  }
+  @-ms-keyframes slide{
+      0%, 100% { opacity: 0; }
+      6%, 25% { opacity: 1; z-index: 2; }
+      30%, 50% { opacity: 2; z-index: 2; }
+  }
+  @-o-keyframes slide{
+      0%, 100% { opacity: 0; }
+      6%, 25% { opacity: 1; z-index: 2; }
+      30%, 50% { opacity: 2; z-index: 2; }
+  }
+  @keyframes slide{
+      0%, 100% { opacity: 0; }
+      6%, 25% { opacity: 1; z-index: 2; }
+      30%, 50% { opacity: 2; z-index: 2; }
+  }
+  .slider > #input-slide-autoplay:checked ~ ul > li.slide-0{
+      -webkit-animation: slide 32000ms infinite -2000ms linear;
+      -moz-animation: slide 32000ms infinite -2000ms linear;
+      -ms-animation: slide 32000ms infinite -2000ms linear;
+      -o-animation: slide 32000ms infinite -2000ms linear;
+      animation: slide 32000ms infinite -2000ms linear;
+  }
+  .slider > #input-slide-autoplay:checked ~ ul > li.slide-1{
+      -webkit-animation: slide 32000ms infinite 6000ms linear;
+      -moz-animation: slide 32000ms infinite 6000ms linear;
+      -ms-animation: slide 32000ms infinite 6000ms linear;
+      -o-animation: slide 32000ms infinite 6000ms linear;
+      animation: slide 32000ms infinite 6000ms linear;	
+  }
+  
+  .slider > #input-slide-autoplay:checked ~ ul > li{
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none;	
+  }
+  
 
 
 
