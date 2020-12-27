@@ -11,24 +11,39 @@
 <body>
     <div id="app"></div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    
+
     <script>
         new Vue({
             el: '#app',
-            template: `<div class="container">
-    <div class="container_item">
-        <div class="container_banner">
+            template: `
+            <div class="container">
+            <div class="container_item">
+              <div class="container_banner">
+
+              <div class="container_apresentacao" id="">
+                <img src="../src/img/logo.png" alt="logo" >
+                <span>|</span>
+                <h1 id="slideDescription">Histórico Empresarial</h1>
+
+                <h3> O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma  empresa desde o seu ano de fundação.</h3>
+                
+                    <h2>R$ 40,00</h2>
+                    <a>Saiba Mais</a>
+                    
+
+                
+            </div>
             <div class='slider'>
 
-                  
                 <input name="input-slider" id='input-slide-autoplay' type="radio" class='input-slide' checked>
                 <ul>
                   <li class='slide-0'></li>
                   <li class='slide-1'></li>
-                  
-                </ul>
+                 </ul>
+                 
                 </div>
               </div>
+              
         <hr>
 
     </div>

@@ -6166,9 +6166,7 @@ body * {
 }
 
 .container .container_banner .slider > #input-slide-0:checked ~ ul > li.slide-0,
-.container .container_banner .slider > #input-slide-1:checked ~ ul > li.slide-1,
-.container .container_banner .slider > #input-slide-0:checked ~ ul > li.slide-2,
-.container .container_banner .slider > #input-slide-1:checked ~ ul > li.slide-3 {
+.container .container_banner .slider > #input-slide-1:checked ~ ul > li.slide-1 {
   opacity: 1;
   z-index: 2;
 }
@@ -6181,14 +6179,6 @@ body * {
   background-image: url("../img/banner2.png");
 }
 
-.container .container_banner .slider > ul > li.slide-2 {
-  background-image: url("../img/banner.png");
-}
-
-.container .container_banner .slider > ul > li.slide-3 {
-  background-image: url("../img/banner2.png");
-}
-
 .container .container_banner ul,
 .container .container_banner li {
   list-style: none;
@@ -6196,6 +6186,67 @@ body * {
 
 .container .container_banner input {
   display: none;
+}
+
+.container .container_apresentacao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  z-index: 200;
+  position: absolute;
+  margin-left: 40px;
+}
+
+.container .container_apresentacao h1 {
+  width: 400px;
+  padding-top: 35px;
+  padding-left: 20px;
+}
+
+.container .container_apresentacao h2 {
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.container .container_apresentacao a {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(248, 116, 27, 0.857)), to(#f86605));
+  background-image: linear-gradient(to right, rgba(248, 116, 27, 0.857), #f86605);
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.container .container_apresentacao img {
+  width: 150px;
+  height: 40px;
+  padding-top: 30px;
+  color: white;
+}
+
+.container .container_apresentacao span {
+  width: 3px;
+  height: 15px;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: 40px;
+}
+
+.container .container_apresentacao p {
+  width: 500px;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 15px;
+  color: black;
 }
 
 .container .nav {
