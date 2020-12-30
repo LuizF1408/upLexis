@@ -21,14 +21,14 @@
               <div class="container_banner">
 
               <div class="container_apresentacao" id="">
-                <img src="../src/img/logo.png" alt="logo" >
+                <img src="/src/img/logo.png" alt="logo" >
                 <span>|</span>
                 <h1 id="slideDescription">Histórico Empresarial</h1>
 
-                <h3> O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma  empresa desde o seu ano de fundação.</h3>
+                <p> O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma  empresa desde o seu ano de fundação.</p>
                 
                     <h2>R$ 40,00</h2>
-                    <a>Saiba Mais</a>
+                    <a href="#modal">Saiba Mais</a>
                     
 
                 
@@ -50,6 +50,7 @@
 
 
     <div class="nav">
+        
         <a>
             <i class="fas fa-globe fa-2x"></i>
             Todos</a>
@@ -99,7 +100,13 @@
                 <div class="description_item">{{card.description}}</div>
                 <div class="nav_bottom">
                     <p>{{card.price}}</p> 
-                    <a>{{card.btn}}</a>
+                    <a href="#modal">{{card.btn}}</a>
+                    <div id="modal" class="modal">
+                        <a href="#fechar" title="Fechar" class="fechar">X</a>
+                          <h2>Title</h2>
+                          
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
                 </div>
             </div >
         </div>
@@ -195,6 +202,26 @@
                         },
                     ]
                 }
+
+            }
+
+            ,
+            methods:{
+                filterAll(){
+
+                },
+                filterPro(){
+
+                },
+                filterReg(){
+
+                },
+                filterSo(){
+
+                },
+                
+
+
 
             }
 

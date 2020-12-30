@@ -6224,6 +6224,7 @@ body * {
   border-radius: 5px;
   text-align: center;
   padding-top: 3px;
+  text-decoration: none;
 }
 
 .container .container_apresentacao img {
@@ -6363,6 +6364,7 @@ body * {
   font-size: 17px;
   font-weight: bold;
   padding: 10px 0 0 0;
+  text-decoration: none;
 }
 
 .container .container_card .item h1 {
@@ -6388,6 +6390,48 @@ body * {
   color: gray;
   font-size: 20px;
   padding-top: 15px;
+}
+
+.container .container_card .modal {
+  position: fixed;
+  width: 600px;
+  height: 300px;
+  top: 10vw;
+  right: 0;
+  bottom: 0;
+  left: 27vw;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0, 0, 0, 0.878);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.container .container_card .modal a {
+  text-decoration: none;
+}
+
+.container .container_card .modal h2 {
+  text-align: center;
+}
+
+.container .container_card .modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container .container_card .fechar {
+  position: absolute;
+  width: 30px;
+  right: 0px;
+  top: -15px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  font-size: 15px;
+  color: white;
 }
 
 @-webkit-keyframes slide {
@@ -6431,5 +6475,108 @@ body * {
 .slider > #input-slide-autoplay:checked ~ ul > li {
   -webkit-transition: none;
   transition: none;
+}
+
+@media screen and (max-device-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    width: 480px;
+  }
+  .container .container_item {
+    margin: 10px;
+  }
+  .container .container_item hr {
+    width: 476px;
+    border: 2px solid #f86605;
+  }
+  .container .container_card {
+    margin-top: 90px;
+  }
+  .container .container_card .modal {
+    position: fixed;
+    width: 350px;
+    height: 200px;
+    top: 150px;
+    right: 0;
+    bottom: 0;
+    left: 90px;
+  }
+  .container .container_card .modal a {
+    text-decoration: none;
+  }
+  .container .container_card .modal h2 {
+    text-align: center;
+  }
+  .container .container_card .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .container .container_card .fechar {
+    position: absolute;
+    width: 30px;
+    right: 0px;
+    top: -15px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+  }
+  .container .container_apresentacao {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    z-index: 200;
+    position: absolute;
+    margin-left: 40px;
+  }
+  .container .container_apresentacao h1 {
+    width: 200px;
+    font-size: 20px;
+  }
+  .container .container_apresentacao h2 {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .container .container_apresentacao a {
+    margin-left: 90px;
+  }
+  .container .container_apresentacao img {
+    width: 100px;
+    height: 30px;
+  }
+  .container .container_apresentacao span {
+    width: 3px;
+    height: 10px;
+    font-size: 30px;
+  }
+  .container .container_apresentacao p {
+    width: 400px;
+  }
+  .container .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 35px;
+    width: 480px;
+    height: 80px;
+  }
+  .container .nav a {
+    width: 80px;
+    height: 80px;
+    border: 1px solid gray;
+    border-radius: 2px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
